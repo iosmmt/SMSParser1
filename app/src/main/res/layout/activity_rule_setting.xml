@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".RuleSettingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="@string/title_rule_setting"
+        android:titleTextColor="@color/on_primary"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 快递公司正则规则 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快递公司正则规则"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/
+
+                <EditText
+                    android:id="@+id/etCompanyRegex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="例如: 顺丰|申通|圆通|中通|韵达|百世|极兔|京东"
+                    android:inputType="text"
+                    android:background="@drawable/border"/
+            </LinearLayout>
+
+            <!-- 取件码正则规则 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取件码正则规则"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/
+
+                <EditText
+                    android:id="@+id/etCodeRegex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="例如: [取件码|快递码|取货码]\s*[:：]?\s*([A-Z0-9]+)"
+                    android:inputType="text"
+                    android:background="@drawable/border"/
+            </LinearLayout>
+
+            <!-- 驿站正则规则 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="驿站正则规则"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/
+
+                <EditText
+                    android:id="@+id/etStationRegex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="例如: [驿站|代收点|自提点]\s*[:：]?\s*([\u4e00-\u9fa50-9]+)"
+                    android:inputType="text"
+                    android:background="@drawable/border"/
+            </LinearLayout>
+
+            <!-- 地址正则规则 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地址正则规则"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/
+
+                <EditText
+                    android:id="@+id/etAddressRegex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="例如: [地址|位置]\s*[:：]?\s*([\u4e00-\u9fa50-9]+)"
+                    android:inputType="text"
+                    android:background="@drawable/border"/
+            </LinearLayout>
+
+            <!-- 电话正则规则 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电话正则规则"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/
+
+                <EditText
+                    android:id="@+id/etPhoneRegex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="例如: 电话\s*[:：]?\s*([0-9]{11})"
+                    android:inputType="text"
+                    android:background="@drawable/border"/
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_reset"
+            android:backgroundTint="@color/gray"
+            android:textColor="@color/on_primary"
+            android:layout_marginRight="16dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_save"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@color/on_primary"/>
+    </LinearLayout>
+
+</LinearLayout>

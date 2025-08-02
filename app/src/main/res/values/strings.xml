@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">取件码助手</string>
+    <string name="title_main">取件码助手</string>
+    <string name="title_rule_setting">正则规则设置</string>
+    <string name="title_custom_rule">自定义规则设置</string>
+    <string name="btn_rule_setting">规则设置</string>
+    <string name="btn_custom_rule">自定义规则</string>
+    <string name="btn_reset">重置</string>
+    <string name="btn_save">使用</string>
+    <string name="btn_mark_as_taken">标记已取</string>
+    <string name="label_tag">标签</string>
+    <string name="label_phone">快递电话</string>
+    <string name="label_code">取件码</string>
+    <string name="label_address">取件地址</string>
+    <string name="label_prefix">前</string>
+    <string name="label_suffix">后</string>
+    <string name="hint_sms_content">请输入或粘贴短信内容，查看解析结果，以便检查规则是否有效</string>
+    <string name="label_result">解析结果：</string>
+    <string name="permission_sms_denied">请授予短信权限，否则应用无法正常工作</string>
+    <string name="no_express_info">暂无快递信息</string>
+    <string name="marked_as_taken">已标记为已取</string>
+</resources>
